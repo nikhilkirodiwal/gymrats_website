@@ -1,0 +1,389 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+html, body {
+    color:#f2f2f2;
+    background-color: #000000;
+}
+.container1{
+  margin:0px auto;
+  width:1200px;
+  margin-right:80px;
+  margin-left:260px;
+}
+.heading {
+    margin-top:50px;
+    margin-bottom: 100px;
+    font-size: 20px;
+    font-weight: 500;
+    padding:500px;
+    display: flex;
+ }
+button {
+  width:120px;
+  height:30px;
+  background-color:#bbb;
+  color: #000000;
+  text-decoration: none;
+  font-size:14px;
+  display:inline-block;
+  margin-top:20px;
+}
+/********** Common CSS Ends **********/
+/********** Logo CSS Starts **********/  
+.logo {
+    width:50px;
+    height:px;
+    margin:px;
+    padding:0px;
+    position:absolute;
+    margin-top:px;
+    margin-left:100px;
+
+}
+/********** Logo CSS Ends **********/
+/********** Main Menu CSS Starts **********/  
+nav {
+    width: 100%;
+    float:inline-end;
+    padding:15px 0px;
+}
+nav a {
+    color:aliceblue;
+    text-decoration: none;
+    font-size: 17px;
+    border-right:2px solid #000000;
+    padding:2px 20px;
+}
+/* Caption text */
+.text p{
+  color: #ffffff;
+  position:absolute;
+  font-size: 70px;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.text1 h2{
+  color: #f2f2f2;
+  position:absolute;
+  font-size:25px;
+  top:60%;
+  left:23%;
+  transform: translate(-50%, -50%);
+  margin-left:0px;
+}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display:inline;}
+img{
+  vertical-align: middle;};
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  .active {
+    background-color: #717171;
+  }
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  /* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+.slideshow-container{
+    margin-top: 0%;
+    margin-bottom: auto;
+} 
+.about .row{
+  height:1500px;
+  margin-top:2000px;
+  font-size:30px;
+}
+.about{
+  width:96%;
+  margin-right: 40px;
+  padding-top: 80px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+for header
+h1{
+  font-size: 38px;
+  font-weight: 600;
+  margin-right: 200px;
+}
+.about-image{
+  flex:1;
+  margin-right:45px;
+  overflow:hidden;
+  
+}
+.about-image img{
+  max-width: 80%;
+  height:auto;
+  display:block;
+  transition: 0.5s ease;
+  margin-left: 100px;
+  margin-bottom:20px;
+}
+h3{
+  font-size:40px;
+  padding-top:0px;
+}
+p1{
+  font-size:13px;
+  font-size: 13px;
+  line-height: 20px;
+  margin-right:80px;
+}
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container3 {
+  width: 100%;
+  min-height: 100vh;
+  background: #100d0d;
+}
+
+.container3 h4 {
+  color: #f3e5e5;
+  font-size: 32px;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.price-row {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 25px;
+}
+
+.price-col {
+  background: black;
+  padding: 10% 15%;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+}
+.price-col p {
+  font-size: 25px;
+}
+
+.price-col h3 {
+  font-size: 44px;
+  margin: 20px 0 40px;
+  font-weight: 500;
+}
+
+.price-col h3 span {
+  font-size: 16px;
+}
+
+.price-col ul {
+  text-align: left;
+  margin: 20px 0;
+  color: #cfc0c0;
+}
+
+.price-col ul li {
+  margin: 15px 0;
+  size: 20px;
+}
+
+.price-col button {
+  width: 50%;
+  height: 15%;
+  padding: 14px 0;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+.price-col button:hover {
+  background: #757d75;
+}
+.container4 h5 {
+  color: #d0c3c3;
+  font-size: 32px;
+  padding: 50px 0;
+  text-align: center;
+}
+.container4 img{
+  height:80%;
+  width:80%;
+  margin-left:150px;
+  margin-right: 100px;
+}
+.form {
+  background-color: #c1c7cd;
+  height: 400px;
+  width: 550px;
+  border-radius: 20px;
+  margin: 20px auto 20px auto;
+  display: block;
+  border: solid 3px #050505;
+  box-shadow: 0 0 40px 0 #6c6868;
+}
+.form:hover {
+  box-shadow: 0 0 60px 0 #121111;
+  transition: .4s;
+  transform: scale(1.02);
+}
+.row-one {
+  padding: 20px;
+  margin-top: 0px;
+}
+.row-two {
+  padding: 20px;
+  margin-bottom:30px;
+}
+.text-input {
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 60px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fcfdfe;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.text-input:last-child {
+  margin-bottom: 35px;
+}
+
+.text-input:hover {
+  background-color: #bab9c1;
+}
+#submit {
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 140px;
+  background-color: #516573;
+  color: #fff;
+  margin: auto;
+  display: block;
+  outline: none;
+  cursor: pointer;
+}
+
+#submit:hover{
+  background-color: #819099;
+}
+.text {
+  display: inline-block;
+  margin: 5px 20px 5px 8px;;
+}
+.row-one {
+  padding: 30px 20px 15px 20px;
+}
+.row-two {
+  padding: 15px 20px 30px 20px;
+}
+.calculator {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+.calculator input {
+  position: absolute;
+  opacity: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #646a6f;
+  border-radius: 50%;
+}
+.calculator:hover input ~ .checkmark {
+  background-color: #607686;
+}
+.calculator input:checked ~ .checkmark {
+  background-color:#607686;
+}
+h7 {
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  color: #294562;
+  padding-top: 15px;
+  display: block;
+}
+h8{
+  font-size: 22px;
+  font-weight: 300;
+  text-align: center;
+}
+h6 {
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  padding: 20px;
+  color:#325d7f;
+  margin-top: 80px;
+}
+
+h6 b {
+  font-size: 32px;
+  font-weight: 300;
+  color: #bfc8d2;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.calculator input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.calculator .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

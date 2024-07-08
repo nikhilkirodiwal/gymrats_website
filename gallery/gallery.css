@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+.input{
+    display: none;
+}
+.container5{
+    width:90%;
+    text-align: center;
+    margin-left: 70px;
+}
+h1{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin:40px 0;
+    margin-left: 60px;
+    color:#6a747c;
+  }
+  h1::before{
+    content: '';
+    position:absolute;
+    width: 100px;
+    height:3px;
+    background-color: brown;
+    bottom:-10px;
+    left:50%;
+    transform:translateX(-50%);
+    animation: animate 4s linear infinite;
+  }
+  @keyframes animate{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width:200px;
+    }
+    100%{
+        width:100px;
+    }
+  }
+  .top-content{
+    background-color: #d2d9dd;
+    width: 90%;
+    margin:0 auto 20px auto;
+    height:60px;
+    display:flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgb(102, 53, 53);
+    margin-top: 50px;
+    margin-left: 45px;
+  }
+  h3{
+    width:80%;
+    margin-left:115px;
+    height: 100%;
+    background-color: rgb(161, 82, 82);
+    line-height: 60px;
+    padding: 0 50px;
+    color:white;
+  }
+  label{
+    display: inline-block;
+    height: 100%;
+    padding:0 50px;
+    margin:0 20px;
+    line-height:60px;
+    font-size:18px;
+    color:gray;
+    cursor:pointer;
+    transition: color.5s;
+  }
+  label:hover{
+    color:black;
+  }
+  .photo-gallery{
+    width: 50%;
+    display:grid;
+    grid-gap: 1px;
+    grid-template-columns:repeat(4, 1fr);
+    margin-left: 110px;
+  }
+  .pic{
+    position: relative;
+    height: 200px;
+    width:300px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px lightgray ;
+    cursor: pointer;
+    transition: .5s;
+  }
+  .pic img{
+    width: 100%;
+    height:100%;
+    border-radius: 10px;
+  }
+  .pic::before{
+    content: "photo gallery";
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+  }
+  .pic:after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    bottom:0;
+    left:0;
+    border-radius: 10px;
+    height:0;
+    height:100%;
+    background-color: rgba(0,0,0,.4);
+    transition: .3s;
+  }
+  .pic:hover::after{
+    height: 100%;
+  }
+  .pic:hover::before{
+    margin-top: 0;
+    opacity: 1;
+  }
+ 
+

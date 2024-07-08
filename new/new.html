@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Home</title>
+      <link rel="stylesheet" href="new.css">
+   </head>
+   <body style="background-color:aqiamarine;"></body>
+<div class="container">
+    <img src="logo.jpg" class="logo">
+    </div>
+<nav>
+    <div class="container1"> 
+       <h1 align="right">
+       <a href="#">Home</a> 
+       <a href="#">About </a> 
+       <a href="#">Gallery</a> 
+       <a href="#">Pricing</a> 
+       <a href="#">Blogs</a> 
+       <a href="#">Contact us</a> 
+       <button>JOIN NOW</button>
+       </div>
+       </nav>
+<div>
+<body>
+   <div class="slideshow-container">
+   <div class="mySlides fade">
+     <img src="bg.jpeg" style="width:100%">
+     <div class="text"><p>FITNESS CLUB.</p></div>
+     <div class="text1"><h2>If you want something you've never had,you must <br>be willing to do something you've never done</h2></div>
+   </div>
+   <div class="mySlides fade">
+     <img src="slid.jpeg" style="width:100%">
+     <div class="text"><p>FITNESS CLUB.</p></div>
+     <div class="text1"><h2>If you want something you've never had,you must <br>be willing to do something you've never done</h2></div>
+   </div>
+   <div class="mySlides fade">
+     <img src="slider4.jpeg" style="width:100%">
+     <div class="text"><p>FITNESS CLUB.</p></div>
+     <div class="text1"><h2>If you want something you've never had,you must <br>be willing to do something you've never done</h2></div>
+   </div>
+   <div class="mySlides fade">
+    <img src="slidd.jpeg" style="width:100%">
+    <div class="text"><p>FITNESS CLUB.</p></div>
+    <div class="text1"><h2>If you want something you've never had,you must <br>be willing to do something you've never done</h2></div>
+   <br>
+   </div>
+   <div style="text-align:center">
+     <span class="dot"></span> 
+     <span class="dot"></span> 
+     <span class="dot"></span> 
+     <span class="dot"></span></div>
+     <div class="container2">
+      <section class="about">
+     <div class="about-image">
+      <img src="banner.jpeg">
+     </div>
+    <div class="about-content">
+       <h3>About Us</h3>
+      <p1>fffffflacedhdddhdhdhdhdgshdhdatf explijdjdjjdjdjjdjdj in saepe autem aliqggggggg<br>fffffflacedhdddhdhdhdhdgshdhdatf explijdjdjjdjdjjdjdj in saepe autem aliqggggggg<br>fffffflacedhdddhdhdhdhdgshdhdatf explijdjdjjdjdjjdjdj in saepe autem aliqggggggg<br>fffffflacedhdddhdhdhdhdgshdhdatf explijdjdjjdjdjjdjdj in saepe autem aliqggggggg<br>fffffflacedhdddhdhdhdhdgshdhdatf explijdjdjjdjdjjdjdj in saepe autem aliqggggggg<br>fffffflacedhdddhdhdhdhdgshdhdatf explijdjdjjdjdjjdjdj in saepe autem aliqggggggg<br>fffffflacedhdddhdhdhdhdgshdhdatf explijdjdjjdjdjjdjdj in saepe autem aliqggggggg<br>fffffflacedhdddhdhdhdhdgshdhdatf explijdjdjjdjdjjdjdj in saepe autem aliqggggggg<br>fffffflacedhdddhdhdhdhdgshdhdatf explijdjdjjdjdjjdjdj in saepe autem aliqggggggg<br>fffffflacedhdddhdhdhdhdgshdhdatf explijdjdjjdjdjjdjdj in saepe autem aliqggggggg<br>fffffflacedhdddhdhdhdhdgshdhdatf explijdjdjjdjdjjdjdj in saepe autem aliqggggggg<br></div></p1></div></p1></div></p></div>
+   </div>
+  </section>
+ <script>
+      let slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000)
+      }
+</script>
+<div class="container3">
+  <h4>Select Your Plan</h4>
+  <div class="price-row">
+      <div class="price-col">
+          <p>Basic</p>
+          <h3>500 Rs <span>/month</span></h3>
+          <ul>
+              <li>Personal Trainer</li>
+              <li>Convienient Time</li>
+              <li>Class Timing 1 hour</li>
+              <li>No extra classes</li>
+          </ul>
+          <button>Buy Now</button>
+      </div>
+      <div class="price-col">
+          <p>Standard</p>
+          <h3>1000 Rs <span>/month</span></h3>
+          <ul>
+              <li>Personal Trainer</li>
+              <li>Convienient Time</li>
+              <li>Class Timing 1 hour</li>
+              <li>No extra classes</li>
+          </ul>
+          <button>Buy Now</button>
+      </div>
+      <div class="price-col">
+          <p>Premium</p>
+          <h3>1200 Rs <span>/month</span></h3>
+          <ul>
+              <li>Personal Trainer</li>
+              <li>Convienient Time</li>
+              <li>Class Timing 1 hour</li>
+              <li>No extra classes</li>
+          </ul>
+          <button>Buy Now</button>
+      </div>
+  </div>
+</div>
+<div class="container4">
+  <h5>FITNESS SCHEDULES</h5>
+  <img src="schedule.jpeg.jpg">
+</div>
+  <h6>BODY Index Calculator</h6>
+<form class="form" id="form" onsubmit="return validateForm()">
+<div class="row-one">
+  <input type="text" class="text-input" id="age" autocomplete="off" required/><p class="text">Age</p>
+  <label class="calculator">
+  <input type="radio" name="radio" id="f"><p class="text">Female</p>
+    <span class="checkmark"></span>
+  </label>
+  <label class="calculator">
+  <input type="radio" name="radio" id="m"><p class="text">Male</p>
+    <span class="checkmark"></span>
+  </label>
+  </div>
+<div class="row-two">
+  <input type="text" class="text-input" id="height" autocomplete="off" required><p class="text">Height (cm)</p>
+  <input type="text" class="text-input" id="weight" autocomplete="off" required><p class="text">Weight (kg)</p>
+</div>
+<button type="button" id="submit">Submit</button>
+</form>
+<script>
+  var age = document.getElementById("age");
+var height = document.getElementById("height");
+var weight = document.getElementById("weight");
+var male = document.getElementById("m");
+var female = document.getElementById("f");
+var form = document.getElementById("form");
+
+function validateForm(){
+if(age.value=='' || height.value=='' || weight.value=='' || (male.checked==false && female.checked==false)){
+  alert("All fields are required!");
+  document.getElementById("submit").removeEventListener("click", countBmi);
+}else{
+  countBmi();
+}
+}
+document.getElementById("submit").addEventListener("click", validateForm);
+
+function countBmi(){
+var p = [age.value, height.value, weight.value];
+if(male.checked){
+  p.push("male");
+}else if(female.checked){
+  p.push("female");
+}
+form.reset();
+var bmi = Number(p[2])/(Number(p[1])/100*Number(p[1])/100);
+    
+var result = '';
+if(bmi<18.5){
+  result = 'Underweight';
+   }else if(18.5<=bmi&&bmi<=24.9){
+  result = 'Healthy';
+   }else if(25<=bmi&&bmi<=29.9){
+  result = 'Overweight';
+   }else if(30<=bmi&&bmi<=34.9){
+  result = 'Obese';
+   }else if(35<=bmi){
+  result = 'Extremely obese';
+   }
+
+var h7 = document.createElement("h7");
+var h8 = document.createElement("h8");
+
+var t = document.createTextNode(result);
+var b = document.createTextNode('BMI: ');
+var r = document.createTextNode(parseFloat(bmi).toFixed(2));
+
+h1.appendChild(t);
+h2.appendChild(b);
+h2.appendChild(r);
+
+document.body.appendChild(h1);
+document.body.appendChild(h2);
+document.getElementById("submit").removeEventListener("click", countBmi);
+document.getElementById("submit").removeEventListener("click", validateForm);
+}
+document.getElementById("submit").addEventListener("click", countBmi);
+</script>

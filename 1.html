@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylsheet" href="s.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="calculator">
+        <h1 class="text-center">BMI Calculator</h1>
+        <div class="form">
+            <div class="mb-3">
+                <label class="form-label">
+                    Height:
+                    <div class="input-value">
+                        <input id="height" class="form-range" type="range" value="1" min="1" max="300" />
+                        <span id="height-value">0</span>
+                        <!-- Select Height unit -->
+                        <select id="height-unit" class="form-select">
+                            <option value="cm">cm</option>
+                            <option value="m">m</option>
+                            <option value="in">in</option>
+                            <option value="ft">ft</option>
+                        </select>
+                    </div>
+                </label class="form-label">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">
+                    Weight:
+                    <div class="input-value">
+                        <input id="weight" class="form-range" type="range" value="1" min="1" max="300" />
+                        <span id="weight-value">0</span>
+                        <!-- Select Weight unit -->
+                        <select id="weight-unit" class="form-select">
+                            <option value="kg">kg</option>
+                            <option value="g">g</option>
+                            <option value="lbs">lbs</option>
+                            <option value="oz">oz</option>
+                        </select>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="text-center">
+            <h1 class="bmi"></h1>
+            <h2 class="remark"></h2>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+        <!-- link js from index.js -->
+        <script src="index.js"></script>
+ 
+</body>
+</html>
+<script>
+    const height = document.getElementById("height");
+    const weight = document.getElementById("weight");
+     
+    const bmiElem = document.querySelector(".bmi");
+    const remarkElem = document.querySelector(".remark");
+     
+    const heightUnit = document.getElementById("height-unit");
+    const weightUnit = document.getElementById("weight-unit");
+     
+    const heightValue = document.getElementById("height-value");
+    const weightValue = document.getElementById("weight-value");
+     
+    let textColor = "green";
+    let remark = "Normal";
+    let bmi = 0;
+     
+    bmiElem.innerHTML = bmi;
+     
+    function resetDefault(height, weight) {
+      if (height !== null) {
+        height.value = height;
+      }
+      if (weight !== null) {
+        weight.value = weight;
+      }
+    }
+     
+    function updateValue(bmi, remark, textColor) {
+      bmiElem.innerHTML = `${bmi.toPrecision(4)}`;
+      remarkElem.innerHTML = remark;
+      remarkElem.style.color = textColor;
+    }
+     
+    function calculateBMI(height, weight) {
+      const heightUnit = document.getElementById("height-unit").value;
+      const weightUnit = document.getElementById("weight-unit").value;
+     
+      // Convert height to meter
+     
+      if (heightUnit === "cm") {
+        height /= 100;
+      } else if (heightUnit === "in") {
+        height /= 39.37;
+      } else if (heightUnit === "ft") {
+        height /= 3.281;
+      }
+     
+      // Convert weight to kg
+     
+      if (weightUnit === "g") {
+        weight /= 1000;
+      } else if (weightUnit === "lbs") {
+        weight /= 2.205;
+      } else if (weightUnit === "oz") {
+        weight /= 35.274;
+      }
+     
+      // calculate bmi from height in meter and weight in kg
+      bmi = weight / (height * height);
+     
+      if (bmi < 18.5) {
+        remark = "Underweight";
+        textColor = "red";
+      } else if (bmi >= 18.5 && bmi <= 24.9) {
+        remark = "Normal";
+        textColor = "green";
+      } else if (bmi >= 25 && bmi <= 29.9) {
+        remark = "Overweight";
+        textColor = "orange";
+      } else if (bmi >= 30) {
+        remark = "Obese";
+        textColor = "red";
+      }
+     
+      updateValue(bmi, remark, textColor);
+    }
+     
+    // Adjust the min and max attribute of the height and weight input range
+    heightUnit.addEventListener("change", () => {
+      const heightUnitValue = heightUnit.value;
+      if (heightUnitValue === "cm") {
+        height.min = 1;
+        height.max = 300;
+        resetDefault(1, null);
+      } else if (heightUnitValue === "m") {
+        height.min = 1;
+        height.max = 5;
+        resetDefault(1, null);
+      } else if (heightUnitValue === "in") {
+        height.min = 1;
+        height.max = 118;
+        resetDefault(1, null);
+      } else if (heightUnitValue === "ft") {
+        height.min = 1;
+        height.max = 9;
+        resetDefault(1, null);
+      }
+      calculateBMI(height.value, weight.value);
+    });
+     
+    weightUnit.addEventListener("change", () => {
+      const weightUnitValue = weightUnit.value;
+      if (weightUnitValue === "kg") {
+        weight.min = 1;
+        weight.max = 300;
+        resetDefault(null, 1);
+      } else if (weightUnitValue === "g") {
+        weight.min = 1000;
+        weight.max = 300000;
+        resetDefault(null, 1);
+      } else if (weightUnitValue === "lbs") {
+        weight.min = 2;
+        weight.max = 661;
+        resetDefault(null, 1);
+      } else if (weightUnitValue === "oz") {
+        weight.min = 35;
+        weight.max = 10582;
+        resetDefault(null, 1);
+      }
+      calculateBMI(height.value, weight.value);
+    });
+     
+    height.addEventListener("input", () => {
+      heightValue.innerHTML = height.value;
+      calculateBMI(height.value, weight.value);
+    });
+    weight.addEventListener("input", () => {
+      weightValue.innerHTML = weight.value;
+      calculateBMI(height.value, weight.value);
+    });
+</script> 
